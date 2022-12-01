@@ -1,3 +1,4 @@
+
 pipeline {
     agent  any
     stages {
@@ -14,6 +15,11 @@ pipeline {
                     }
                 }
             }
+           post {
+                 always {
+                     jiraSendBuildInfo branch: 'test'
+                 }
+             }
         }
     }
 }
