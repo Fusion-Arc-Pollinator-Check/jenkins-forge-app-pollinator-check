@@ -17,7 +17,7 @@ pipeline {
             }
            post {
                  always {
-                     jiraSendBuildInfo branch: 'test'
+                     jiraSendBuildInfo branch: 'main'
                  }
              }
         }
